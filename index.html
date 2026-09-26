@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Melva Archive Dashboard">
+
+    <title>Melva Archive</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+    <!-- =========================
+         APP CONTAINER
+    ========================== -->
+
+    <div class="app-shell">
+
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <!-- Brand -->
+
+            <div class="brand-card">
+                <div class="brand-kicker">
+                    Welcome to
+                </div>
+
+                <div class="brand-name">
+                    Melva's
+                </div>
+
+                <div class="brand-sub">
+                    Archive
+                </div>
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="side-nav">
+
+                <button class="nav-item active">
+                    ⌂ Home
+                </button>
+
+                <button class="nav-item">
+                    ◈ Schedule
+                </button>
+
+                <button class="nav-item">
+                    ☑ Task
+                </button>
+
+                <button class="nav-item">
+                    ▤ Playlist
+                </button>
+
+                <button class="nav-item">
+                    ▧ Messages
+                </button>
+
+            </nav>
+
+
+        </aside>
+
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="main">
+
+
+            <!-- =========================
+                 HEADER
+            ========================== -->
+
+
+            <header class="topbar">
+
+
+                <button
+                    class="menu-btn"
+                    id="menuBtn">
+                    ☰
+                </button>
+
+
+                <div class="welcome">
+
+                    <p id="greeting">
+                        Loading...
+                    </p>
+
+                    <h1>
+                        Riska Amelia Agustin
+                    </h1>
+
+                    <p>
+                        What's happening today?
+                    </p>
+
+                </div>
+
+
+
+                <!-- DATE + PROFILE -->
+
+                <div class="top-meta">
+
+
+                    <div class="date-box">
+
+                        <span id="currentDate">
+                            Loading date...
+                        </span>
+
+                        <span id="currentDay">
+                            Loading day...
+                        </span>
+
+                        <span id="currentTime">
+                            00:00
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="profile-wrapper">
+
+
+                        <button
+                            type="button"
+                            id="editProfileBtn">
+
+                            Edit Profile
+
+                        </button>
+
+
+
+                        <button
+                            class="profile-avatar"
+                            id="profileButton">
+
+
+                            <img
+                                id="profileImage"
+                                src=""
+                                alt="Profile">
+
+
+                            <span id="profileDefault">
+                                🧑🏻‍🌾
+                            </span>
+
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+                    <!-- =========================
+             HERO LANDSCAPE
+        ========================== -->
+
+        <section class="hero-landscape">
+
+            <div class="hill hill-back"></div>
+            <div class="hill hill-mid"></div>
+
+            <div class="pine p1"></div>
+            <div class="pine p2"></div>
+            <div class="pine p3"></div>
+
+            <div class="tent"></div>
+
+            <div class="water"></div>
+
+            <div class="boat">
+                🛶
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             DASHBOARD GRID
+        ========================== -->
+
+        <section class="dashboard-grid">
+
+
+
+            <!-- OVERVIEW -->
+
+            <article class="card overview-card">
+
+                <div class="card-heading">
+
+                    <span>
+                        🌿
+                    </span>
+
+                    <h2>
+                        Overview
+                    </h2>
+
+                </div>
+
+
+                <div class="overview-body">
+
+                    <div class="rating-box">
+
+                        <span class="small-label">
+                            Rating
+                        </span>
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <div class="rating-number">
+                            4.9 / 5
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-stack">
+
+                        <div>
+                            <span>
+                                Weather
+                            </span>
+
+                            <strong>
+                                Sunny
+                            </strong>
+                        </div>
+
+
+                        <div>
+                            <span>
+                                Location
+                            </span>
+
+                            <strong>
+                                Green Island
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+
+            <!-- CALENDAR -->
+
+            <article class="card calendar-card">
+
+                <div class="card-heading">
+
+                    <div class="calendar-title">
+
+                        <span>
+                            📅
+                        </span>
+
+                        <h2 id="calendarMonth">
+                            Calendar
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        id="nextMonth"
+                        class="calendar-arrow">
+
+                        ›
+
+                    </button>
+
+                </div>
+
+
+
+                <div
+                    id="calendar"
+                    class="calendar">
+
+                </div>
+
+            </article>
+
+
+
+
+
+            <!-- TASK -->
+
+            <article class="card tasks-card">
+
+                <div class="card-heading">
+
+                    <span>
+                        ☑
+                    </span>
+
+                    <h2>
+                        Tasks
+                    </h2>
+
+                </div>
+
+
+                <div class="task-list">
+
+
+                    <div class="task">
+
+                        <span>
+                            🌱
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Water plants
+                            </strong>
+
+                            <small>
+                                Today
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="task">
+
+                        <span>
+                            📚
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Read archive
+                            </strong>
+
+                            <small>
+                                Tomorrow
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+                        <!-- CHAT -->
+
+            <article class="card chat-card">
+
+                <div class="chat-header">
+
+
+                    <div class="chat-title">
+
+                        <div class="chat-icon">
+                            💬
+                        </div>
+
+
+                        <div>
+
+                            <h2>
+                                Global Chat
+                            </h2>
+
+
+                            <div class="chat-status">
+
+                                <span class="status-dot"></span>
+
+                                Online
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <button class="chat-menu">
+                        •••
+                    </button>
+
+
+                </div>
+
+
+
+                <div
+                    id="chatMessages"
+                    class="chat-messages">
+
+                </div>
+
+
+
+                <form
+                    id="chatForm"
+                    class="chat-input-area">
+
+
+                    <input
+                        id="chatInput"
+                        type="text"
+                        placeholder="Write a message..."
+                        autocomplete="off">
+
+
+                    <button
+                        type="submit"
+                        class="chat-send">
+
+                        ➤
+
+                    </button>
+
+
+                </form>
+
+
+            </article>
+
+        </section>
+                <!-- =========================
+             PROFILE MODAL
+        ========================== -->
+
+
+        <div
+            id="profileModal"
+            class="profile-modal">
+
+
+            <div class="profile-modal-box">
+
+
+                <button
+                    id="closeProfileModal"
+                    class="profile-modal-close">
+
+                    ×
+
+                </button>
+
+
+
+                <h3>
+                    Edit Profile
+                </h3>
+
+
+
+                <div class="profile-preview">
+
+                    <div
+                        id="profilePreview"
+                        class="profile-preview-image">
+
+                        👤
+
+                    </div>
+
+                </div>
+
+
+
+                <label>
+                    Name
+                </label>
+
+
+                <input
+                    id="profileName"
+                    type="text"
+                    maxlength="30">
+
+
+
+                <label>
+                    Profile Picture
+                </label>
+
+
+                <input
+                    id="profilePhoto"
+                    type="file"
+                    accept="image/*">
+
+
+
+                <button
+                    id="saveProfileBtn">
+
+                    Save
+
+                </button>
+
+
+
+                <div
+                    id="profileSaveStatus">
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <!-- TOAST -->
+
+        <div
+            id="toast"
+            class="toast">
+
+        </div>
+
+
+
+    </main>
+
+
+</div>
+
+
+
+<script type="module" src="script.js"></script>
+
+</body>
+
+</html>
